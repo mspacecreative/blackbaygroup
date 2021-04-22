@@ -1,0 +1,54 @@
+.button, button span {
+	display: inline-block;
+	padding: 8px 10px;
+}
+
+.button a {
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 15px 8px;
+	position: relative;
+	text-transform: uppercase;
+	font: 700 15px/1em "proxima-nova", Proxima Nova, sans-serif;
+	text-align: center;
+	display: block;
+	border: 2px solid #fff;
+	transition: 0.25s ease-in-out;
+}
+
+.cta-button.button {
+	padding: 0;
+	margin: 25px 0 0;
+}
+
+#cta {
+	clear: left;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+}
+
+#cta:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+#cta .one-half:first-child {
+	float: left;
+	width: 100%;
+	position: relative;
+	right: 60%;
+	//background: #d9d9d9;
+}
+
+/*
+.cta {
+	float: left;
+	width: 60%;
+	position: relative;
+	left: 60%;
+	overflow: hidden;
+}
+*/

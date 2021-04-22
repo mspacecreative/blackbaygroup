@@ -1,0 +1,22 @@
+nav .sub-menu {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 200px;
+	transition: 0.25s ease-in-out;
+	z-index: 1;
+	background: #000;
+	border-top: 1px solid #fff;
+}
+
+header nav li {
+	position: relative;
+}
+
+header nav .menu-item-has-children:hover .sub-menu {
+	opacity: 1;
+	visibility: visible;
+	transition: 0.25s ease-in-out;
+}

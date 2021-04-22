@@ -1,0 +1,65 @@
+.photo-gallery.slick-dotted.slick-slider, .google-map {
+	margin: 0;
+	overflow: hidden;
+}
+
+.photo-gallery .slick-next {
+	right: 15px;
+}
+
+.photo-gallery .slick-next, .photo-gallery .slick-prev, .timeline .slick-next, .timeline .slick-prev {
+	width: auto;
+	height: auto;
+}
+
+.photo-gallery .slick-prev {
+	left: 15px;
+	z-index: 1;
+}
+
+.hero .banner {
+	background-size: cover!important;
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+.photo-gallery .slick-next:before, .timeline .slick-next:before {
+	content: '\f105';
+	font-family: fontAwesome;
+	font-size: 60px;
+}
+
+.photo-gallery .slick-prev:before, .timeline .slick-prev:before {
+	content: '\f104';
+	font-family: fontAwesome;
+	font-size: 60px;
+}
+
+.photo-gallery.slick-dotted.slick-slider {
+	margin-bottom: 25px;
+}
+
+.slider-for img {
+	float: right;
+	max-width: 300px;
+	margin: 8px 0 20px 20px;
+}
+
+.slick-slide i, .timeline .slick-slide p {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.slider-for {
+	z-index: 2;
+}
+
+.slider-for p {
+	text-align: center;
+	font-size: 2em;
+	line-height: 1.2em;
+	margin-top: 2em;
+}

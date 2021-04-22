@@ -1,0 +1,167 @@
+/* MASONRY
+------------------------------------------*/
+
+.fa.fa-plus {
+	position: absolute;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -40%);
+	background: rgba(255, 255, 255, .35);
+	width: 52px;
+	border-radius: 200px;
+	font-size: 30px;
+	line-height: 52px;
+	opacity: 0;
+	transition: .5s ease-in-out;
+	z-index: 10;
+	color: #fff;
+	pointer-events: none;
+}
+
+.grid-item:hover .fa.fa-plus {
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	transition: .5s ease-in-out;
+}
+
+.index-post-box {
+	border: 1px solid #56c8e2;
+	background: #fff;
+}
+
+.grid img {
+	width: 100%;
+}
+
+.grid p {
+	font-size: 1em;
+	padding: 8px 12px;
+	margin: 0;
+	text-transform: uppercase;
+	line-height: 1.2em;
+}
+
+.grid .grid-inner p:last-child {
+	margin-bottom: 0;
+}
+
+.grid, .grid {
+	width: 100%;
+	margin: auto;
+}
+
+/* ---- grid ---- */
+
+.grid {
+	width: 100%;
+}
+
+.gutter-sizer {
+	width: 3%;
+}
+
+/* clear fix */
+
+.grid:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.grid-item {
+	border: 1px solid #e9e9e9;
+}
+
+/* ---- .grid-item ---- */
+
+@media (min-width: 800px) {
+	.grid-sizer,
+	.grid-item {
+		width: 31.333%;
+	}
+	
+	.et_divi_builder #et_builder_outer_content .et_pb_module img.alignright {
+		
+	}
+}
+
+.grid-item, #et_builder_outer_content div .grid-item {
+	margin-bottom: 3%;
+}
+
+.grid-item img {
+	display: block;
+	max-width: 100%;
+	min-width: 100%;
+	height: auto;
+	transition: 0.5s ease-in-out;
+}
+
+.grid-inner {
+	position: relative;
+	overflow: hidden;
+}
+
+.grid-inner:before {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	transition: 0.5s ease-in-out;
+	z-index: 1;
+	content: '';
+	background: rgba(150, 100, 0, .75);
+	opacity: 0;
+	visibility: hidden;
+}
+
+.grid-item a {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.grid-item-shadow:hover {
+	transition: 0.5s ease-in-out;
+	box-shadow: 0 0 15px #999;
+}
+
+.grid-item-shadow {
+	transition: 0.5s ease-in-out;
+}
+
+.grid-item:hover .grid-inner:before {
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+	visibility: visible;
+}
+
+.grid-item:hover img {
+	transform: scale(1.1);
+	transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 540px) {
+	.grid-sizer, .grid-item, .grid-sizer, .grid-item {
+		width: 100%;
+	}
+	
+	.grid-item {
+		margin-bottom: 5%;
+	}
+	
+	#et_builder_outer_content div .our_clients .grid-item {
+		margin-bottom: 10%;
+	}
+}
+
+@media (min-width: 540px) and (max-width: 800px) {
+	.grid-sizer, .grid-item, .grid-sizer, .grid-item {
+		width: 48.5%;
+	}
+}

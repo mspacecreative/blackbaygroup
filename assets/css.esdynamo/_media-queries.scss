@@ -1,0 +1,287 @@
+@media (min-width: 1280px) {
+	.headline h1 {
+		max-width: 75%;
+	}
+	
+	.team-member button {
+		margin-top: 0;
+	}
+	
+	.team-member h3, .our-team {
+		float: left;
+	}
+	
+	.team-member button {
+		float: right;
+	}
+	
+	.team-member {
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 1080px) {
+	nav {
+		display: none;
+	}
+	
+	.headline {
+		font-size: 80px;
+		bottom: -7px;
+		max-width: 75%;
+	}
+}
+
+@media (min-width: 1080px) {
+	button.hamburger {
+		display: none;
+	}
+	
+	.headline h1 {
+		font-size: 7em;
+	}
+}
+
+@media (max-width: 980px) {
+	#cta, #cta .one-half:first-child, .current-projects, .cta {
+		float: none;
+		width: 100%;
+		right: auto;
+		left: auto;
+	}
+	
+	.bevel-overlay {
+		background-image: url(img/bevel-overlay-mobile.png)!important;
+		background-position: top right 25%!important;
+	}
+	
+	.bevel-overlay img {
+		max-width: 25%;
+		height: auto;
+	}
+	
+	.fw-container:before {
+		display: none;
+	}
+	
+	.fw-container {
+		padding: 0;
+	}
+	
+	.two_third, .one_third {
+		padding: 50px 5%;
+	}
+	
+	.one_third {
+		right: 0;
+		background: #f5f5f5;
+		padding-bottom: 0;
+	}
+	
+	.left-content {
+		padding: 0 5% 50px;
+	}
+	
+	.breadcrumbs {
+		left: 5%;
+	}
+	
+	#cta .one-half:first-child {
+		background: none;
+	}
+	
+	.current-projects {
+		background: #d9d9d9;
+	}
+	
+	.one-half, .one_third, .two_third {
+		float: none;
+		width: 100%;;
+	}
+	
+	.left-content, .right-content {
+		float: none;
+		width: 100%;
+	}
+	
+	.google-map {
+		height: 300px!important;
+	}
+	
+	.photo-gallery.slick-dotted.slick-slider {
+		margin-top: 25px;
+	}
+}
+
+@media (min-width: 980px) and (max-width: 1280px) {
+	.fw-container:before {
+		width: 23%;
+	}
+	
+	.one_third {
+		width: 24.05%;
+	}
+	
+	.two_third {
+		width: 70.666%;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 980px) {
+	.team-member {
+		float: left;
+		margin-right: 5%;
+		width: 30%;
+	}
+	
+	.team-member:last-child {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.post-navigation .half:nth-child(2n) {
+		width: 50%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+	.post-navigation a {
+		font-size: 15px;
+	}
+	
+	.post-navigation .half {
+		float: left;
+		width: 45%;
+		margin: 0 5% 0 0;
+		min-height: 1px;
+	}
+	
+	.post-navigation .half:nth-child(2n) {
+		margin-top: 0;
+		margin-right: 0;
+		text-align: right;
+	}
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+	.headline h1, .headline.align-right h1 {
+		position: relative;
+		right: auto;
+		left: auto;
+		font-size: 40px;
+		max-width: none;
+		text-align: left;
+		bottom: auto;
+		margin-bottom: 20px;
+	}
+	
+	#residential .et_pb_text_align_left, #commercial .et_pb_text_align_left {
+		text-align: left;
+	}
+	
+	#residential div > div.button, #commercial div > div.button {
+		padding-left: 0;
+	}
+	
+	.tagline {
+		width: 80%;
+	}
+}
+
+@media (max-width: 1080px) {
+	#index article {
+		padding: 70px 0 35px;
+	}
+}
+
+@media (max-width: 812px) and (orientation: landscape) {
+	.headline {
+		font-size: 60px;
+		bottom: -5px;
+	}
+	
+	.triangle {
+		bottom: -350px;
+	}
+}
+
+@media (max-width: 600px) {
+	.timeline .slick-list:before {
+		width: 90%;
+	}
+}
+
+@media (min-width: 1080px) {
+	#index article {
+		padding: 70px 0 35px;
+	}
+}
+
+@media (max-width: 812px) {
+	.version-3 .logo {
+		width: 200px;
+	}
+	
+	.headline {
+		max-width: none;
+	}
+	
+	.timeline {
+		max-width: 80%;
+	}
+	
+	.timeline .slick-next {
+		right: -15px;
+	}
+	
+	.timeline .slick-prev {
+		left: -15px;
+	}
+	
+	.timeline .slick-next:before, .timeline .slick-prev:before {
+		font-size: 45px;
+	}
+	
+	article h1 {
+		line-height: 1em;
+	}
+	
+	.one-half.no-margin > div h1 {
+		font-size: 40px;
+	}
+	
+	.tagline {
+		font-size: 3em;
+	}
+	
+	.home.page article {
+		padding: 0;
+	}
+	
+	.black-brick:before, .black-brick:after {
+		display: none;
+	}
+}
+
+@media (min-width: 981px) {
+	.milestones-container > div > div {
+		padding-right: 5%!important;
+		padding-left: 5%!important;
+	}
+	
+	.swipe-container {
+		//position: absolute;
+		//top: 50%;
+		//left: 50%;
+		//width: 90%;
+		//transform: translate(-50%,-50%);
+		z-index: 1;
+	}
+}
+
+@media (min-width: 1600px) {
+	.featured-bg-img {
+		background-size: 50%!important;
+	}
+}

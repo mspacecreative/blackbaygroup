@@ -1,0 +1,39 @@
+#cover {
+  background: #000;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+
+#cover .fa-spinner {
+	font-size: 30px;
+	color: #fff;
+}
+
+.loader-container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 30px;
+	height: 30px;
+	margin-left: -15px;
+	margin-top: -15px;
+}
+
+.spin-logo {
+	animation-name: spin;
+	animation-duration: 1000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	width: 50px;
+}
+	
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}

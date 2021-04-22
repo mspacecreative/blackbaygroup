@@ -1,0 +1,70 @@
+.row.listing-grid {
+	margin-right: -1rem;
+	margin-left: -1rem;
+}
+
+.row.listing-grid > .col {
+	padding-bottom: 2em;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+.listing-grid a {
+	color: #000;
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+.listing-grid a::before {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	content: "";
+	background-color: rgba(0, 0, 0, .75);
+	transition: 0.25s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+}
+.listing-grid a::after {
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	content: "Details";
+	color: #fff;
+	text-transform: uppercase;
+	transition: 0.25s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+.listing-grid a p {
+    font-size: 18px;
+    text-transform: uppercase;
+    position: absolute;
+    background-color: #fff;
+    padding: .5em .75em .5em 0;
+    bottom: 0;
+    left: 0;
+    max-width: 80%;
+    line-height: 1.15em;
+	z-index: 2;
+}
+.listing-grid img {
+	display: block;
+	transition: 0.25s ease-in-out;
+}
+.listing-grid a:hover > img {
+	transition: 0.25s ease-in-out;
+	transform: scale(1.1);
+}
+.listing-grid .col:hover > a::before, .listing-grid .col:hover > a::after {
+	opacity: 1;
+	transition: 0.25s ease-in-out;
+	visibility: visible;
+}

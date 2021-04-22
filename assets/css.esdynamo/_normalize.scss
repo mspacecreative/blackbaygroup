@@ -1,0 +1,73 @@
+/* CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+* {
+	outline: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	overflow-x: hidden;
+	font-family: "proxima-nova", Proxima Nova, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+	overflow-x: hidden;
+	background: #000;
+}
+
+.textwidget {
+	padding: 25px 0;
+}
+
+.et_pb_section, .et_pb_row, .page .et_pb_row_inner, .page .et_pb_column_1_4 {
+	padding: 0;
+}
+
+.page .et_pb_row_inner:last-of-type {
+	padding-bottom: 50px;
+}
+
+/* END CSS RESET */
