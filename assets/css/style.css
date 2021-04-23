@@ -1929,6 +1929,15 @@ src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/s
 	}
 }
 
+.other-listings {
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+.other-listings .slick-prev:before, .slick-next:before {
+	color: #333;
+}
+
 .row.listing-grid {
 	margin-right: -1rem;
 	margin-left: -1rem;

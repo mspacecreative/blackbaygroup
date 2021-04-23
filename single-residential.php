@@ -94,17 +94,6 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 				<?php endif; ?>
 				<!-- END CTA BUTTONS -->
 				
-				<!-- PAGINATION -->
-				<div class="post-navigation clearfix">
-					<div class="half prev-link">
-						<?php previous_post_link('%link', 'Previous'); ?>
-					</div>
-					<div class="half next-link">
-						<?php next_post_link('%link', 'Next'); ?>
-					</div>
-				</div>
-				<!-- END PAGINATION -->
-				
 			</div>
 			<!-- END LEFT SIDE CONTENT SECTION -->
 			
@@ -278,6 +267,11 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 			
 		</div>
 		<!-- END SINGLE LISTING SECTION -->
+		
+		<div class="other-listings">
+			<?php get_template_part('includes/loop-other-residential'); ?>
+		</div>
+		
 	</div> <!-- .container -->
 	<?php endif; ?>
 </div> <!-- #main-content -->
