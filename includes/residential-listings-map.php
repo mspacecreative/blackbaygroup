@@ -49,7 +49,6 @@
     width: 100%;
     height: 100%;
     border: none;
-    margin: 20px 0;
 }
 
 /* Fixes potential theme css conflict. */
@@ -223,10 +222,19 @@ if ( $loop->have_posts() ) : ?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post();
 		
 		// Load sub field values.
-	    $location = get_field('location_map', $post->ID); ?>
+	    $location = get_field('location_map', $post->ID);
+	    $permalink = get_the_permalink($post->ID);
+	    $featuredimg = get_the_post_thumbnail_url( $post->ID, 'listing-thumb'); ?>
 		
 		<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>">
 			<div class="info_content">
+				<?php if ( $featuredimg ) {
+				echo '
+				<a href="' . $permalink . '">
+					<img src="' . $featuredimg . '">
+				</a>';
+				} ?>
+				
 				<h3 style="margin-top: 0;"><?php the_title(); ?></h3>
 		        <?php if ( $location ) {
 		        	echo '<p>' . $location['address'] . '</p>';
