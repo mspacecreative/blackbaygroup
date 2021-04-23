@@ -26,7 +26,8 @@
 
 .featured-img-container {
 	width: 100%;
-	height: 200px;
+	height: 180px;
+	overflow: hidden;
 }
 .featured-img-container img {
 	width: 100%;
@@ -47,6 +48,14 @@
 
 .gm-style-pbc {
 	background-color: rgba(255, 255, 255, 0.75)!important;
+}
+.gm-style .gm-style-iw-c {
+	max-width: 300px;
+	padding: 0;
+}
+.gm-style-iw-d {
+	padding: 0!important;
+	overflow: hidden!important;
 }
 
 .gm-ui-hover-effect, .gm-ui-hover-effect img {
