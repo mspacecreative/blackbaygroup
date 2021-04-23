@@ -57,8 +57,8 @@
    max-width: inherit !important;
 }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer_compiled.js"></script>
-<script type="text/javascript">
+
+<script>
 (function( $ ) {
 
 /**

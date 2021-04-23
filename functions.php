@@ -90,3 +90,4 @@ include 'functions/disable-projects.php';
 include 'functions/properties-to-dropdown.php';
 include 'functions/disable-ssl.php';
 include 'functions/shortcodes.php';
+include 'functions/google-map-api.php';
