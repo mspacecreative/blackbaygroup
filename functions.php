@@ -89,3 +89,4 @@ add_shortcode( 'google_map', 'google_maps' );
 include 'functions/disable-projects.php';
 include 'functions/properties-to-dropdown.php';
 include 'functions/disable-ssl.php';
+include 'functions/shortcodes.php';
