@@ -124,7 +124,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 				
 				<!-- GOOGLE MAP -->
 				<style type="text/css">
-				.acf-map {
+				.single .acf-map {
 				    width: 100%;
 				    height: 400px;
 				    border: #ccc solid 1px;
