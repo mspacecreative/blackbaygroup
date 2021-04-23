@@ -20,6 +20,24 @@
 .info_content p {
 	margin-top: 5px;
 }
+.info-content-copy {
+	padding: 15px;
+}
+
+.featured-img-container {
+	width: 100%;
+	height: 200px;
+}
+.featured-img-container img {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+}
+
+.info_content > a {
+	padding: 0;
+	margin: 0;
+}
 
 #phoneNumber {
 	text-align: center;
@@ -231,39 +249,45 @@ if ( $loop->have_posts() ) : ?>
 				<?php if ( $featuredimg ) {
 				echo '
 				<a href="' . $permalink . '">
-					<img src="' . $featuredimg . '">
+					<div class="featured-img-container">
+						<img src="' . $featuredimg . '">
+					</div>
 				</a>';
 				} ?>
 				
-				<h3 style="margin-top: 0;"><?php the_title(); ?></h3>
-		        <?php if ( $location ) {
-		        	echo '<p>' . $location['address'] . '</p>';
-		        } else {
-	        		echo '<p>' . the_content() . '</p>';
-	        	} ?>
-				<?php if( have_rows('cta_buttons', $post->ID) ):
-				while( have_rows('cta_buttons', $post->ID) ): the_row();
-				$weblink = get_sub_field('website_link', $post->ID);
-				$phone = get_sub_field('phone_number', $post->ID);
+				<div class="info-content-copy">
 				
-				$currentlang = get_bloginfo('language');
-				if ( $currentlang == 'en-CA' ) {
-					if ( $weblink ) {
-						echo '<a class="gm-website" href="' . $weblink . '" target="_blank">VISIT WEBSITE</a>';
-					} 
-					if ( $phone ) {
-						echo '<a class="gm-phone" href="tel:+1' . $phone . '">CALL</a>';
-					}
-				} elseif ( $currentlang == 'fr-FR' ) {
-					if ( $weblink ) {
-						echo '<a class="gm-website" href="' . $weblink . '" target="_blank">Visitez le site web</a>';
-					} 
-					if ( $phone ) {
-						echo '<a class="gm-phone" href="tel:+1' . $phone . '">Appel</a>';
-					}
-				}
+					<h3 style="margin-top: 0;"><?php the_title(); ?></h3>
+			        <?php if ( $location ) {
+			        	echo '<p>' . $location['address'] . '</p>';
+			        } else {
+		        		echo '<p>' . the_content() . '</p>';
+		        	} ?>
+					<?php if( have_rows('cta_buttons', $post->ID) ):
+					while( have_rows('cta_buttons', $post->ID) ): the_row();
+					$weblink = get_sub_field('website_link', $post->ID);
+					$phone = get_sub_field('phone_number', $post->ID);
+					
+					$currentlang = get_bloginfo('language');
+					if ( $currentlang == 'en-CA' ) {
+						if ( $weblink ) {
+							echo '<a class="gm-website" href="' . $weblink . '" target="_blank">VISIT WEBSITE</a>';
+						} 
+						if ( $phone ) {
+							echo '<a class="gm-phone" href="tel:+1' . $phone . '">CALL</a>';
+						}
+					} elseif ( $currentlang == 'fr-FR' ) {
+						if ( $weblink ) {
+							echo '<a class="gm-website" href="' . $weblink . '" target="_blank">Visitez le site web</a>';
+						} 
+						if ( $phone ) {
+							echo '<a class="gm-phone" href="tel:+1' . $phone . '">Appel</a>';
+						}
+					} ?>
 				
-				endwhile;
+				</div>
+				
+				<?php endwhile;
 				endif; ?>
 		    </div>
 	    </div>
