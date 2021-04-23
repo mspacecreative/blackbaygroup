@@ -156,7 +156,7 @@ function initMarker( $marker, map ) {
 }
 
 function markerCluster( markers, map ) {
-    var markerCluster = new MarkerClusterer(map, markers, {
+    var markerCluster = new MarkerCluster(map, markers, {
 		imagePath: window.location.protocol + '//' + window.location.host + '/wp-content/themes/blackbay/includes/img/m1.png',
 	});
 }
