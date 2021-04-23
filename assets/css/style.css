@@ -1934,6 +1934,11 @@ src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/s
 	padding-bottom: 4em;
 }
 
+.other-listings h2 {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
 .other-listings .slick-prev:before, .slick-next:before {
 	color: #333;
 }
