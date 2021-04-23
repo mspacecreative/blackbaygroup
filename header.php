@@ -31,24 +31,6 @@
 	<script type="text/javascript">
 		document.documentElement.className = 'js';
 	</script>
-	
-	<!-- GOOGLE MAP STYLES -->
-	<style type="text/css">
-	
-	.acf-map {
-		width: 100%;
-		height: 400px;
-		border: #ccc solid 1px;
-		margin: 20px 0;
-	}
-	
-	/* fixes potential theme css conflict */
-	.acf-map img {
-	   max-width: inherit !important;
-	}
-	
-	</style>
-	<!-- /GOOGLE MAP STYLES -->
 
 	<?php wp_head(); ?>
 </head>
