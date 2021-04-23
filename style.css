@@ -342,6 +342,10 @@ header.fixed a {
 	padding: 5em 0;
 }
 
+body:not(.et-tb) #main-content .container, body:not(.et-tb-has-header) #main-content .container, #main-content .container {
+	padding-top: 5em;
+}
+
 .et_right_sidebar #main-content .container:before {
 	width: 20.785%;
 	right: 0!important;
