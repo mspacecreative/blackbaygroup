@@ -146,7 +146,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 					    // Create gerenic map.
 					    var mapArgs = {
 					        zoom        : $el.data('zoom') || 16,
-					        mapTypeId   : google.maps.MapTypeId.ROADMAP,
+					        mapTypeId   : google.maps.MapTypeId.ROADMAP
 					    };
 					    var map = new google.maps.Map( $el[0], mapArgs );
 					
@@ -217,6 +217,13 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 					        map.fitBounds( bounds );
 					    }
 					}
+					
+					// Render maps on page load.
+					$(document).ready(function(){
+					    $('.acf-map').each(function(){
+					        var map = initMap( $(this) );
+					    });
+					});
 				
 				})(jQuery);
 				</script>
@@ -226,7 +233,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 				
 				if( !empty($location) ):
 				?>
-				<div id="map" class="acf-map">
+				<div class="acf-map">
 					<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
 				</div>
 				<?php endif; ?>
