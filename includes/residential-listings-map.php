@@ -1,6 +1,6 @@
 <style type="text/css">
 .info_content {
-	padding: 15px;
+	
 }
 
 .info_content a {
@@ -50,7 +50,7 @@
 	background-color: rgba(255, 255, 255, 0.75)!important;
 }
 .gm-style .gm-style-iw-c {
-	max-width: 300px;
+	max-width: 300px!important;
 	padding: 0;
 }
 .gm-style-iw-d {
