@@ -87,14 +87,11 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 				<!-- /UNIT INFO -->
 				
 				<!-- CTA BUTTONS -->
-				<div class="button light cta-button">
-					<a href="<?php echo home_url('contact'); ?>/tenant-rental-application/">Landlord Reference</a>
-				</div>
+				<?php if( get_field('more_info_button') ): ?>
 				<div class="button light">
-					<?php if( get_field('more_info_button') ): ?>
 					<a href="<?php the_field('more_info_button'); ?>" target="_blank">More Information</a>
-					<?php endif; ?>
 				</div>
+				<?php endif; ?>
 				<!-- END CTA BUTTONS -->
 				
 				<!-- PAGINATION -->
