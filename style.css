@@ -339,7 +339,7 @@ header.fixed a {
 }
 
 #main-content .container {
-	padding: 50px 0;
+	padding: 5em 0;
 }
 
 .et_right_sidebar #main-content .container:before {
@@ -377,9 +377,13 @@ p:last-of-type {
 }
 
 p {
-	font: 500 16px/1.5em "proxima-nova", Proxima Nova, Arial, Helvetica, Geneva, sans-serif;
+	font: 500 18px/1.5em "proxima-nova", Proxima Nova, Arial, Helvetica, Geneva, sans-serif;
 	margin: 0 0 15px;
 	position: relative;
+}
+
+ul,ol,p strong {
+	font: 500 18px/1.5em "proxima-nova", Proxima Nova, Arial, Helvetica, Geneva, sans-serif;
 }
 
 .container {
