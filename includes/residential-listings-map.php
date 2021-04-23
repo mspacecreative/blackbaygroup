@@ -271,9 +271,11 @@ if ( $loop->have_posts() ) : ?>
 			        	echo '<p>' . $location['address'] . '</p>';
 			        } else {
 		        		echo '<p>' . the_content() . '</p>';
-		        	} ?>
-					<?php if( have_rows('cta_buttons', $post->ID) ):
+		        	}
+		        	
+		        	if( have_rows('cta_buttons', $post->ID) ):
 					while( have_rows('cta_buttons', $post->ID) ): the_row();
+					
 					$weblink = get_sub_field('website_link', $post->ID);
 					$phone = get_sub_field('phone_number', $post->ID);
 					
@@ -292,7 +294,10 @@ if ( $loop->have_posts() ) : ?>
 						if ( $phone ) {
 							echo '<a class="gm-phone" href="tel:+1' . $phone . '">Appel</a>';
 						}
-					} ?>
+					}
+					
+					endwhile;
+					endif; ?>
 				
 				</div>
 				
