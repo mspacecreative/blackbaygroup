@@ -421,7 +421,7 @@ html .et_pb_section, html .et_pb_row {
 	display: block;
 	height: 2px;
 	position: absolute;
-	top: 50%;
+	top: 13px;
 	width: 100%;
 	left: 0;
 }
