@@ -21,10 +21,6 @@
 }
 
 @media (max-width: 1080px) {
-	nav {
-		display: none;
-	}
-	
 	.headline {
 		font-size: 80px;
 		bottom: -7px;
@@ -33,10 +29,6 @@
 }
 
 @media (min-width: 1080px) {
-	button.hamburger {
-		display: none;
-	}
-	
 	.headline h1 {
 		font-size: 7em;
 	}
