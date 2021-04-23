@@ -158,7 +158,7 @@ function initMarker( $marker, map ) {
 
 function markerCluster( markers, map ) {
     var markerCluster = new MarkerClusterer(map, markers, {
-		imagePath: 'https://staging.blackbaygroup.ca/wp-content/themes/blackbay/includes/img/m',
+		imagePath: window.location.protocol + '//' + window.location.host + '/wp-content/themes/blackbay/includes/img/m',
 	});
 }
 
