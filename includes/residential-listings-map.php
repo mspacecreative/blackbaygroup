@@ -222,7 +222,7 @@ function centerMap( map ) {
 	
 	// Set zoom level
     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        this.setZoom(16);
+        this.setZoom(4);
         google.maps.event.removeListener(boundsListener);
     });
 }
@@ -246,7 +246,7 @@ $loop = new WP_Query( array(
 
 if ( $loop->have_posts() ) : ?>
 <div class="acf-map-container">
-	<div class="acf-map" data-zoom="16">
+	<div class="acf-map" data-zoom="4">
 		<?php while ( $loop->have_posts() ) : $loop->the_post();
 		
 		// Load sub field values.
