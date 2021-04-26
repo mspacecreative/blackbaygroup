@@ -105,7 +105,7 @@ function initMap( $el ) {
 
     // Create gerenic map.
     var mapArgs = {
-        zoom        : $el.data('zoom') || 4,
+        zoom        : $el.data('zoom') || 16,
         mapTypeId   : google.maps.MapTypeId.ROADMAP,
     };
     var map = new google.maps.Map( $el[0], mapArgs );
@@ -245,7 +245,7 @@ $loop = new WP_Query( array(
 
 if ( $loop->have_posts() ) : ?>
 <div class="acf-map-container">
-	<div class="acf-map" data-zoom="4">
+	<div class="acf-map" data-zoom="16">
 		<?php while ( $loop->have_posts() ) : $loop->the_post();
 		
 		// Load sub field values.
