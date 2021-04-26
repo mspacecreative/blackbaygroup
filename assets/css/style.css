@@ -78,7 +78,7 @@ body {
 	background-color: transparent !important;
 }
 
-body.wp-admin {
+body.wp-admin, body.login {
 	background-color: #fff !important;
 }
 
