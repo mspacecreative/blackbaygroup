@@ -7,17 +7,17 @@
 			<h1 class="entry-title main_title"><?php _e('Residential units'); ?></h1>
 			
 			<?php
-			$args = array( 
+			$args = get_posts(array( 
 				'post_type' => 'residential', 
 				'order' => 'DESC',
 				'meta_query'=> array(
-				$exclude = get_field('exclude_from_list', get_the_ID()),
 					array(
-                    	'key'     => $exclude,
-                    	'compare' => 'NOT EXISTS'
+                    	'key'     => 'exclude_from_list',
+                    	'value'   => '1';
+                    	'compare' => '!='
                     ),
 				),
-			);
+			));
 			$loop = new WP_Query( $args );
 			
 			if ( $loop->have_posts() ) :
