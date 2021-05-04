@@ -2,13 +2,9 @@
 
 function dynamic_field_values ( $tag, $unused ) {
 
-    global $post;
-    
     if ( $tag['name'] != 'properties' )
         return $tag;
         
-    $exclude = get_post_meta( $post->ID, 'exclude_listing_from_drop_down', true );
-
     $args = array (
         'numberposts' => -1,
         'post_type' => 'residential',
@@ -16,7 +12,7 @@ function dynamic_field_values ( $tag, $unused ) {
         'meta_query' => array(
         	array(
 			    'key' => 'exclude_listing_from_drop_down',
-			    'value' => $exclude,
+			    'value' => get_the_ID(),
 			)
 		),
 		'post__not_in' => array( $post->ID )
