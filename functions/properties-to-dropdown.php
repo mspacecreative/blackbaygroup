@@ -16,7 +16,7 @@ function dynamic_field_values ( $tag, $unused ) {
 	    	),
 	    	array(
 		        'key' => 'exclude_from_list',
-		        'compare' => '='
+		        'compare' => '!='
 	    	),
 		),
     );
