@@ -12,7 +12,7 @@ function dynamic_field_values ( $tag, $unused ) {
         'order'         => 'ASC',
         'meta_query'=> array(
         	array(
-        		'relation' => 'OR',
+        		'relation' => 'AND',
         		array(
 	        		'key' => 'exclude_listing_from_drop_down',
 	                'compare' => 'NOT EXISTS'
