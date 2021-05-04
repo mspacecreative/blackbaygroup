@@ -94,7 +94,7 @@
 	
 	    // Create gerenic map.
 	    var mapArgs = {
-	        zoom        : $el.data('zoom') || 14,
+	        zoom        : $el.data('zoom') || 10,
 	        mapTypeId   : google.maps.MapTypeId.ROADMAP,
 	    };
 	    var map = new google.maps.Map( $el[0], mapArgs );
@@ -199,7 +199,7 @@
 		
 		// Set zoom level
 	    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-	        this.setZoom(14);
+	        this.setZoom(10);
 	        google.maps.event.removeListener(boundsListener);
 	    });
 	}
