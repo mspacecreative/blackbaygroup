@@ -8,14 +8,14 @@
 			
 			<?php
 			$args = array( 
-				'numberposts'	=> -1,
+				'numberposts' => -1,
 				'post_type' => 'residential', 
 				'order' => 'DESC',
 				'meta_query'=> array(
-					'relation'	  => 'AND',
+					'relation' => 'AND',
 					array(
-                    	'key'     => 'exclude_from_list',
-                    	'value'   => '1',
+                    	'key' => 'exclude_from_list',
+                    	'value' => TRUE,
                     	'compare' => '!='
                     ),
 				),
