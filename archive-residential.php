@@ -15,7 +15,7 @@
 					array(
                     	'key' => 'exclude_from_list',
                     	'value' => FALSE,
-                    	'compare' => 'IN'
+                    	'compare' => 'NOT IN'
                     ),
 				),
 			);
