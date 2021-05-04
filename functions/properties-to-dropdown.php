@@ -11,8 +11,15 @@ function dynamic_field_values ( $tag, $unused ) {
         'order' => 'ASC',
         'meta_query' => array(
         	array(
-		        'key' => '_exclude_from_list',
+		        'key' => 'exclude_from_list',
 		        'value' => true,
+		    ),
+		    array(
+			    'relation' => 'AND',
+			    array(
+			    	'key' => 'exclude_listing_from_drop_down',
+		        	'compare' => 'NOT EXISTS',
+			    )
 		    )
 		)
     );
