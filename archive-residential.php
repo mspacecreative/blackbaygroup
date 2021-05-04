@@ -15,7 +15,7 @@
 						$exclude = get_field('exclude_from_list', get_the_ID()),
                         array(
                             'key'     => $exclude,
-                            'value'   => true,
+                            'value'   => '1',
                             'compare' => 'NOT EXISTS',
                         ),
 					),
