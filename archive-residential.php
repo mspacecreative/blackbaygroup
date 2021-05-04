@@ -11,7 +11,7 @@
 				'post_type' => 'residential', 
 				'order' => 'DESC',
 				'meta_query'=> array(
-				$exclude = get_post_meta($post->ID,'exclude_from_list',true),
+				$exclude = get_field('exclude_from_list', $post->ID),
 					array(
                     	'key'     => $exclude,
                     	'compare' => 'NOT EXISTS'
