@@ -14,7 +14,7 @@
 				'meta_query'=> array(
 					array(
                     	'key' => 'exclude_from_list',
-                    	'compare' => 'NOT IN'
+                    	'compare' => 'NOT EXISTS'
                     ),
 				),
 			);
