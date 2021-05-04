@@ -10,7 +10,8 @@
 			$loop = new WP_Query( 
 				array( 
 					'post_type' => 'residential', 
-					'order' => 'DESC' 
+					'order' => 'DESC',
+					'posts__not_in' => array(597)
 				) 
 			);
 			if ( $loop->have_posts() ) :
