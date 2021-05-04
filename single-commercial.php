@@ -184,10 +184,15 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 					        lng: parseFloat( lng )
 					    };
 					
-					    // Create marker instance.
+					   // Create marker instance.
 					    var marker = new google.maps.Marker({
 					        position : latLng,
-					        map: map
+					        map: map,
+							icon: {
+								url: window.location.protocol + '//' + window.location.host + '/wp-content/themes/blackbay/includes/img/black-pin.png',
+								size: new google.maps.Size(32, 32),
+								origin: new google.maps.Point(0, 0),
+						    }
 					    });
 					
 					    // Append to reference for later use.
