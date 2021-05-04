@@ -11,8 +11,9 @@
 				'post_type' => 'residential', 
 				'order' => 'DESC',
 				'meta_query'=> array(
+				$exclude = get_field('exclude_from_list'),
 					array(
-                    	'key'     => 'exclude_from_list',
+                    	'key'     => $exclude,
                     	'value'   => false,
                     ),
 				),
