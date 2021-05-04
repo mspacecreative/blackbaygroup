@@ -244,14 +244,11 @@ if ( $loop->have_posts() ) : ?>
 				
 				<div class="info-content-copy">
 				
-					<h3 style="margin-top: 0;"><?php the_title(); ?></h3>
-			        <?php if ( $location ) {
-			        	echo '<p>' . $location['address'] . '</p>';
-			        } else {
-		        		echo '<p>' . the_content() . '</p>';
-		        	}
+					<h3 style="margin-top: 0; font-size: 16px;"><?php the_title(); ?></h3>
+					<a href="<?php echo $permalink ?>">View Details</a>
 		        	
-		        	if( have_rows('cta_buttons', $post->ID) ):
+		        	<?php
+					if( have_rows('cta_buttons', $post->ID) ):
 					while( have_rows('cta_buttons', $post->ID) ): the_row();
 					
 					$weblink = get_sub_field('website_link', $post->ID);
