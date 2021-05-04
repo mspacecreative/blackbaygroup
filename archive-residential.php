@@ -11,7 +11,7 @@
 				array( 
 					'post_type' => 'residential', 
 					'order' => 'DESC',
-					'posts__not_in' => array(597)
+					'post__not_in' => array(597,)
 				) 
 			);
 			if ( $loop->have_posts() ) :
