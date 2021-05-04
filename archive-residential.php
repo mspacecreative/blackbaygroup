@@ -7,17 +7,19 @@
 			<h1 class="entry-title main_title"><?php _e('Residential units'); ?></h1>
 			
 			<?php
-			$args = get_posts(array( 
+			$args = array( 
+				'numberposts'	=> -1,
 				'post_type' => 'residential', 
 				'order' => 'DESC',
 				'meta_query'=> array(
+					'relation'	  => 'AND',
 					array(
                     	'key'     => 'exclude_from_list',
                     	'value'   => '1',
                     	'compare' => '!='
                     ),
 				),
-			));
+			);
 			$loop = new WP_Query( $args );
 			
 			if ( $loop->have_posts() ) :
