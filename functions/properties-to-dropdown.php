@@ -10,6 +10,7 @@ function dynamic_field_values ( $tag, $unused ) {
         'post_type'     => 'residential',
         'orderby'       => 'title',
         'order'         => 'ASC',
+        'post__not_in'  => array(408)
     );
 
     $custom_posts = get_posts($args);
