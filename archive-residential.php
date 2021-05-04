@@ -8,11 +8,11 @@
 			
 			<?php
 			$loop = new WP_Query( 
-				$exclude = get_field('exclude_from_list'),
 				array( 
 					'post_type' => 'residential', 
 					'order' => 'DESC',
 					'meta_query'=> array(
+						$exclude = get_field('exclude_from_list'),
                         array(
                             'key'     => $exclude,
                             'value'   => '1',
