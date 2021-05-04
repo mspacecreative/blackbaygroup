@@ -14,11 +14,6 @@ function dynamic_field_values ( $tag, $unused ) {
         	array(
 			    'key' => 'exclude_listing_from_drop_down',
 			    'value' => true,
-			    'compare' => 'NOT IN'
-			),
-			array(
-			    'key' => 'exclude_from_list',
-			    'value' => true,
 			    'compare' => '!='
 			)
 		)
