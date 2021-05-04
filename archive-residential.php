@@ -16,7 +16,7 @@
                         array(
                             'key'     => $exclude,
                             'value'   => true,
-                            'compare' => '!=',
+                            'compare' => 'NOT EXISTS',
                         ),
 					),
 				) 
