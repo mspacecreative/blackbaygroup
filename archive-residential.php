@@ -8,7 +8,7 @@
 			
 			<?php
 			$loop = new WP_Query( 
-				$exclude = get_field('exclude_from_list')
+				$exclude = get_field('exclude_from_list'),
 				array( 
 					'post_type' => 'residential', 
 					'order' => 'DESC',
