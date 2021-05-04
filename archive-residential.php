@@ -12,7 +12,6 @@
 				'post_type' => 'residential', 
 				'order' => 'DESC',
 				'meta_query'=> array(
-					'relation' => 'OR',
 					array(
                     	'key' => 'exclude_from_list',
                     	'compare' => 'NOT EXISTS'
