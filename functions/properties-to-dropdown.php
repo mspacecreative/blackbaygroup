@@ -2,8 +2,6 @@
 
 function dynamic_field_values ( $tag, $unused ) {
 
-    global $post;
-    
     if ( $tag['name'] != 'properties' )
         return $tag;
         
