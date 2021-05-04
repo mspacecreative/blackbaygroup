@@ -11,7 +11,7 @@ function dynamic_field_values ( $tag, $unused ) {
         'order' => 'ASC',
         'meta_query' => array(
         	array(
-			    'key' => 'exclude_listing_from_drop_down',
+			    'key' => '_exclude_listing_from_drop_down',
 			    'value' => false
 			)
 		)
