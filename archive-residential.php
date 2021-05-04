@@ -14,7 +14,7 @@
 				$exclude = get_post_meta($post->ID,'exclude_from_list',false),
 					array(
                     	'key'     => $exclude,
-                    	'compare' => 'NOT EXISTS';
+                    	'compare' => 'NOT EXISTS'
                     ),
 				),
 			);
