@@ -12,7 +12,7 @@ function dynamic_field_values ( $tag, $unused ) {
         'meta_query' => array(
         	array(
 		        'key' => 'exclude_from_list',
-		        'compare' => 'EXISTS'
+		        'value' => false,
 	    	),
 		),
     );
