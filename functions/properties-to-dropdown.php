@@ -18,8 +18,8 @@ function dynamic_field_values ( $tag, $unused ) {
 			),
 			array(
 			    'key' => 'exclude_from_list',
-			    'value' => false,
-			    'compare' => 'EXISTS'
+			    'value' => true,
+			    'compare' => '!='
 			)
 		)
     );
