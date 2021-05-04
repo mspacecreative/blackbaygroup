@@ -7,13 +7,13 @@
 			<h1 class="entry-title main_title"><?php _e('Residential units'); ?></h1>
 			
 			<?php
+			$exclude = get_field('exclude_from_list', get_the_ID());
 			$loop = new WP_Query( 
 				array( 
 					'post_type' => 'residential', 
 					'order' => 'DESC',
 					'meta_query'=> array(
                         array(
-                        $exclude = get_field('exclude_from_list', get_the_ID());
                             'key'     => $exclude,
                             'value'   => '1',
                             'compare' => '!=',
