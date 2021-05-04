@@ -14,12 +14,8 @@ function dynamic_field_values ( $tag, $unused ) {
         	array(
         		'relation' => 'AND',
         		array(
-	        		'key' => 'exclude_listing_from_drop_down',
-	                'compare' => 'NOT EXISTS'
-        		),
-        		 array(
-                'key' => 'exclude_from_list',
-                'compare' => 'EXISTS'
+	                'key' => 'exclude_from_list',
+	                'compare' => 'EXISTS'
             	),
             ),
 		),
