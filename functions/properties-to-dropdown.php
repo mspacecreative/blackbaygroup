@@ -8,7 +8,6 @@ function dynamic_field_values ( $tag, $unused ) {
     $args = array (
         'numberposts'   => -1,
         'post_type'     => 'residential',
-        'orderby'       => 'title',
         'order'         => 'ASC',
         'meta_query'=> array(
         	array(
