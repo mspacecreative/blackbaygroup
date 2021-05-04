@@ -5,8 +5,8 @@
 
 .info_content a {
 	display: inline-block;
-	margin: 15px 0 0;
-	background: #3F5BA9;
+	margin: 0;
+	background: #000;
 	color: #fff;
 	padding: 10px 15px;
 	margin-right: 15px;
@@ -94,7 +94,7 @@
 	
 	    // Create gerenic map.
 	    var mapArgs = {
-	        zoom        : $el.data('zoom') || 16,
+	        zoom        : $el.data('zoom') || 18,
 	        mapTypeId   : google.maps.MapTypeId.ROADMAP,
 	    };
 	    var map = new google.maps.Map( $el[0], mapArgs );
@@ -199,7 +199,7 @@
 		
 		// Set zoom level
 	    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-	        this.setZoom(12);
+	        this.setZoom(18);
 	        google.maps.event.removeListener(boundsListener);
 	    });
 	}
@@ -223,7 +223,7 @@ $loop = new WP_Query( array(
 
 if ( $loop->have_posts() ) : ?>
 <div class="acf-map-container">
-	<div class="acf-map" data-zoom="12">
+	<div class="acf-map" data-zoom="18">
 		<?php while ( $loop->have_posts() ) : $loop->the_post();
 		
 		// Load sub field values.
