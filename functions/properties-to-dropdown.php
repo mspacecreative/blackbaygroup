@@ -16,6 +16,7 @@ function dynamic_field_values ( $tag, $unused ) {
 			        'key' => 'exclude_from_list',
 			        'value' => true,
 		    	),
+		    	'relation' => 'OR',
 		    	array(
 			        'key' => 'exclude_listing_from_drop_down',
 			        'value' => false,
