@@ -12,11 +12,9 @@
 					'post_type' => 'residential', 
 					'order' => 'DESC',
 					'meta_query'=> array(
-						$exclude = get_field('exclude_from_list', get_the_ID()),
-                        array(
-                            'key'     => $exclude,
-                            'value'   => '1',
-                            'compare' => 'NOT EXISTS',
+						array(
+                            'key'     => 'exclude_from_list',
+                            'value'   => 'false',
                         ),
 					),
 				) 
