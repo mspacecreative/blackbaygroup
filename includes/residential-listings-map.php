@@ -13,12 +13,6 @@
 	text-decoration: none;
 }
 
-img[src="https://staging.blackbaygroup.build/wp-content/themes/blackbay/includes/img/black-pin.png"],
-img[src="https://staging.blackbaygroup.ca/wp-content/themes/blackbay/includes/img/black-pin.png"] {
-	width: 32px!important;
-	height: 32px!important;
-}
-
 .info_content h3 {
 	margin-bottom: 0;
 }
