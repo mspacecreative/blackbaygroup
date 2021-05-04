@@ -13,7 +13,7 @@
 				'meta_query'=> array(
 					array(
                     	'key'     => 'exclude_from_list',
-                    	'value'   => '1';
+                    	'value'   => '1',
                     	'compare' => '!='
                     ),
 				),
