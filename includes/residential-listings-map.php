@@ -13,6 +13,12 @@
 	text-decoration: none;
 }
 
+img[src="https://staging.blackbaygroup.build/wp-content/themes/blackbay/includes/img/black-pin.png"],
+img[src="https://staging.blackbaygroup.ca/wp-content/themes/blackbay/includes/img/black-pin.png"] {
+	width: 32px!important;
+	height: 32px!important;
+}
+
 .info_content h3 {
 	margin-bottom: 0;
 }
@@ -59,8 +65,8 @@
 }
 
 .gm-ui-hover-effect, .gm-ui-hover-effect img {
-	width: 40px!important;
-	height: 40px!important;
+	width: 30px!important;
+	height: 30px!important;
 	top: 0!important;
 	right: 0!important;
 }
@@ -143,7 +149,9 @@
 	        position : latLng,
 	        map: map,
 			icon: {
-		      url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+				url: window.location.protocol + '//' + window.location.host + '/wp-content/themes/blackbay/includes/img/black-pin.png',
+				size: new google.maps.Size(32, 32),
+				origin: new google.maps.Point(0, 0),
 		    }
 	    });
 	
@@ -173,7 +181,7 @@
 	
 	function markerCluster( markers, map ) {
 	    var markerCluster = new MarkerClusterer(map, markers, {
-			imagePath: window.location.protocol + '//' + window.location.host + '/wp-content/themes/blackbay/includes/img/m'
+			imagePath: window.location.protocol + '//' + window.location.host + '/wp-content/themes/blackbay/includes/img/cluster-icon'
 		});
 	}
 	
