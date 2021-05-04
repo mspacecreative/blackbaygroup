@@ -15,7 +15,7 @@
 					array(
                     	'key' => 'exclude_from_list',
                     	'value' => TRUE,
-                    	'compare' => '!='
+                    	'compare' => 'LIKE'
                     ),
 				),
 			);
