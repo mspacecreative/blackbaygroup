@@ -10,12 +10,12 @@ function dynamic_field_values ( $tag, $unused ) {
         'post_type' => 'residential',
         'order' => 'ASC',
         'meta_query' => array(
+        	'relation' => 'AND',
         	array(
 			    'key' => 'exclude_listing_from_drop_down',
-			    'value' => get_the_ID(),
+			    'value' => false,
 			)
-		),
-		'post__not_in' => array( $post->ID )
+		)
     );
 
     $custom_posts = get_posts($args);
