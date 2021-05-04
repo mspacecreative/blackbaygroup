@@ -6,10 +6,10 @@ function dynamic_field_values ( $tag, $unused ) {
         return $tag;
 
     $args = array (
-        'numberposts'   => -1,
-        'post_type'     => 'residential',
-        'order'         => 'ASC',
-        'meta_query'=> array(
+        'numberposts' => -1,
+        'post_type' => 'residential',
+        'order' => 'ASC',
+        'meta_query' => array(
         	array(
 		        'key' => 'exclude_listing_from_drop_down',
 		        'compare' => 'NOT EXISTS'
@@ -17,7 +17,7 @@ function dynamic_field_values ( $tag, $unused ) {
 		),
     );
 
-    $custom_posts = get_posts($args);
+    $custom_posts = new WP_Query( $args );
 
     if ( ! $custom_posts )
         return $tag;
