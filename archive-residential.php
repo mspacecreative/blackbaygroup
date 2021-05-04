@@ -7,18 +7,18 @@
 			<h1 class="entry-title main_title"><?php _e('Residential units'); ?></h1>
 			
 			<?php
-			$loop = new WP_Query( 
-				array( 
-					'post_type' => 'residential', 
-					'order' => 'DESC',
-					'meta_query'=> array(
-						array(
-                            'key'     => 'exclude_from_list',
-                            'value'   => false,
-                        ),
-					),
-				) 
+			$args = array( 
+				'post_type' => 'residential', 
+				'order' => 'DESC',
+				'meta_query'=> array(
+					array(
+                    	'key'     => 'exclude_from_list',
+                    	'value'   => false,
+                    ),
+				),
 			);
+			$loop = new WP_Query( $args );
+			
 			if ( $loop->have_posts() ) :
 			
 			$layout = get_field('layout');
