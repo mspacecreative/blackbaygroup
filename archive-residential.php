@@ -8,12 +8,12 @@
 			
 			<?php
 			$loop = new WP_Query( 
-				$exclude = get_field('exclude_from_list', get_the_ID());
 				array( 
 					'post_type' => 'residential', 
 					'order' => 'DESC',
 					'meta_query'=> array(
                         array(
+                        $exclude = get_field('exclude_from_list', get_the_ID());
                             'key'     => $exclude,
                             'value'   => '1',
                             'compare' => '!=',
