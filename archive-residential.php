@@ -11,7 +11,13 @@
 				array( 
 					'post_type' => 'residential', 
 					'order' => 'DESC',
-					'post__not_in' => array(597,)
+					'meta_query'=> array(
+                        array(
+                            'key'     => 'exclude_from_list',
+                            'value'   => '1',
+                            'compare' => '!=',
+                        ),
+					),
 				) 
 			);
 			if ( $loop->have_posts() ) :
