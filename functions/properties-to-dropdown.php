@@ -17,7 +17,7 @@ function dynamic_field_values ( $tag, $unused ) {
 		),
     );
 
-    $custom_posts = new WP_Query( $args );
+    $custom_posts = get_posts($args);
 
     if ( ! $custom_posts )
         return $tag;
