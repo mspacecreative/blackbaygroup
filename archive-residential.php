@@ -7,8 +7,8 @@
 			<h1 class="entry-title main_title"><?php _e('Residential units'); ?></h1>
 			
 			<?php
-			$exclude = get_field('exclude_from_list', get_the_ID());
 			$loop = new WP_Query( 
+				$exclude = get_field('exclude_from_list')
 				array( 
 					'post_type' => 'residential', 
 					'order' => 'DESC',
