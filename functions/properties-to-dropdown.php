@@ -12,7 +12,8 @@ function dynamic_field_values ( $tag, $unused ) {
         'meta_query' => array(
         	array(
 			    'key' => 'exclude_listing_from_drop_down',
-			    'value' => '0'
+			    'value' => '1',
+			    'compare' => '!='
 			)
 		)
     );
