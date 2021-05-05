@@ -9,13 +9,13 @@ function dynamic_field_values ( $tag, $unused ) {
         'numberposts' => -1,
         'post_type' => 'residential',
         'order' => 'ASC',
-        'meta_query' => array(
-        	array(
-			    'key' => 'exclude_listing_from_drop_down',
-			    'value' => '1',
-			    'compare' => '!='
-			)
-		)
+        //'meta_query' => array(
+        	//array(
+			  //  'key' => 'exclude_listing_from_drop_down',
+			    //'value' => '1',
+			   // 'compare' => '!='
+		//	)
+		//)
     );
 
     $custom_posts = get_posts($args);
