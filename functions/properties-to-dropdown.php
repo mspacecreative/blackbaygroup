@@ -10,11 +10,9 @@ function dynamic_field_values ( $tag, $unused ) {
         'post_type' => 'residential',
         'order' => 'ASC',
         'meta_query' => array(
-        	'relation' => 'AND',
         	array(
 			    'key' => 'exclude_listing_from_drop_down',
-			    'value' => '0',
-			    'compare' => '=='
+			    'value' => '0'
 			)
 		)
     );
