@@ -94,7 +94,8 @@
 	
 	    // Create gerenic map.
 	    var mapArgs = {
-	        zoom        : $el.data('zoom') || 10,
+	        center: {lat: 42.3601, lng: 71.0589},
+			zoom        : $el.data('zoom') || 10,
 	        mapTypeId   : google.maps.MapTypeId.ROADMAP
 	    };
 	    var map = new google.maps.Map( $el[0], mapArgs );
