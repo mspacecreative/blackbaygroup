@@ -91,7 +91,7 @@
 
 	// vars
 	var args = {
-		zoom		: 16,
+		zoom		: 10,
 		center		: new google.maps.LatLng(0, 0),
 		mapTypeId	: google.maps.MapTypeId.ROADMAP
 	};
@@ -99,6 +99,8 @@
 
 	// create map
 	var map = new google.maps.Map( $el[0], args);
+	
+	markerCluster( map.markers, map );
 
 
 	// add a markers reference
@@ -128,10 +130,13 @@
 	// var
 	var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
 
-	// create marker
+	// Create marker instance.
 	var marker = new google.maps.Marker({
-		position	: latlng,
-		map			: map
+	    position : latLng,
+	    map: map,
+		icon: {
+			url: window.location.protocol + '//' + window.location.host + '/wp-content/themes/blackbay/includes/img/black-pin.png'
+		}
 	});
 
 	// add to array
