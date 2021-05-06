@@ -83,35 +83,6 @@
 <script>
 (function($) {
 
-	function initMap( $el ) {
-	
-	    // Find marker elements within map.
-	    var $markers = $el.find('.marker');
-		//var halifax = { lat: 43.6386507, lng: -65.7209915 };
-	
-	    // Create gerenic map.
-	    var mapArgs = {
-	        zoom        : $el.data('zoom') || 16,
-	        mapTypeId   : google.maps.MapTypeId.ROADMAP
-	    };
-	    var map = new google.maps.Map( $el[0], mapArgs );
-	
-	    // Add markers.
-	    map.markers = [];
-	    $markers.each(function(){
-	        initMarker( $markers, map );
-	    });
-	
-	    // Center map based on markers.
-	    centerMap( map );
-		
-		// add marker cluster
-		markerCluster( map.markers, map );
-	
-	    // Return map instance.
-	    return map;
-	}
-	
 	var activeInfoWindow;
 	function initMarker( $marker, map ) {
 	
@@ -186,6 +157,35 @@
 	        this.setZoom(4);
 	        google.maps.event.removeListener(boundsListener);
 	    });
+	}
+	
+	function initMap( $el ) {
+	
+	    // Find marker elements within map.
+	    var $markers = $el.find('.marker');
+		//var halifax = { lat: 43.6386507, lng: -65.7209915 };
+	
+	    // Create gerenic map.
+	    var mapArgs = {
+	        zoom        : $el.data('zoom') || 16,
+	        mapTypeId   : google.maps.MapTypeId.ROADMAP
+	    };
+	    var map = new google.maps.Map( $el[0], mapArgs );
+	
+	    // Add markers.
+	    map.markers = [];
+	    $markers.each(function(){
+	        initMarker( $(this), map );
+	    });
+	
+	    // Center map based on markers.
+	    centerMap( map );
+		
+		// add marker cluster
+		markerCluster( map.markers, map );
+	
+	    // Return map instance.
+	    return map;
 	}
 	
 	// Render maps on page load.
