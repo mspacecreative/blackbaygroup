@@ -178,17 +178,13 @@
 	    // Case: Single marker.
 	    if( map.markers.length == 1 ){
 	        map.setCenter( bounds.getCenter() );
+			map.setZoom( 10 );
 	
 	    // Case: Multiple markers.
 	    } else{
-	        map.fitBounds( bounds );
+	        map.setCenter( bounds.getCenter() );
+			map.setZoom( 10 );
 	    }
-		
-		// Set zoom level
-	    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-	        this.setZoom(10);
-	        google.maps.event.removeListener(boundsListener);
-	    });
 	}
 	
 	// Render maps on page load.
