@@ -87,10 +87,11 @@
 	
 	    // Find marker elements within map.
 	    var $markers = $el.find('.marker');
+		var halifax = { lat: 43.6386507, lng: -65.7209915 };
 	
 	    // Create gerenic map.
 	    var mapArgs = {
-	        center: new google.maps.LatLng(43.6386507, -65.7209915),
+	        center: halifax,
 			zoom        : $el.data('zoom') || 10,
 	        mapTypeId   : google.maps.MapTypeId.ROADMAP
 	    };
@@ -210,7 +211,7 @@ $loop = new WP_Query( array(
 
 if ( $loop->have_posts() ) : ?>
 <div class="acf-map-container">
-	<div class="acf-map" data-zoom="12">
+	<div class="acf-map" data-zoom="10">
 		<?php while ( $loop->have_posts() ) : $loop->the_post();
 		
 		// Load sub field values.
