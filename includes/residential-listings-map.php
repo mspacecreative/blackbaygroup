@@ -147,7 +147,7 @@
 	
 	        // Show info window when marker is clicked.
 		    google.maps.event.addListener(marker, 'click', function() {
-		        map.setCenter(this.getPosition());
+		        //map.setCenter(this.getPosition());
 				map.panBy(0,-100);
 				if (activeInfoWindow) { 
 					activeInfoWindow.close();
