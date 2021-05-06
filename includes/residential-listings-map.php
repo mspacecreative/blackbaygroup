@@ -101,11 +101,11 @@
 	
 		// add markers
 		$markers.each(function(){
-			add_marker( $(this), map );
+			initMarker( $(this), map );
 		});
 	
 		// center map
-		center_map( map );
+		centerMap( map );
 		
 		// add marker cluster
 		markerCluster( map.markers, map );
