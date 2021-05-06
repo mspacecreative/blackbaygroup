@@ -99,7 +99,7 @@
 	    // Add markers.
 	    map.markers = [];
 	    $markers.each(function(){
-	        initMarker( $(this), map );
+	        initMarker( $markers, map );
 	    });
 	
 	    // Center map based on markers.
