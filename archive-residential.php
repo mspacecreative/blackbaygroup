@@ -11,12 +11,6 @@
 				'numberposts' => -1,
 				'post_type' => 'residential', 
 				'order' => 'DESC',
-				'meta_query'=> array(
-					array(
-                    	'key' => 'exclude_from_list',
-                    	'compare' => '!='
-                    ),
-				),
 			);
 			$loop = new WP_Query( $args );
 			
