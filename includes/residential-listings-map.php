@@ -87,11 +87,12 @@
 	
 	    // Find marker elements within map.
 	    var $markers = $el.find('.marker');
-		//var halifax = { lat: 43.6386507, lng: -65.7209915 };
+		var halifax = { lat: 43.6386507, lng: -65.7209915 };
 	
 	    // Create gerenic map.
 	    var mapArgs = {
-	        zoom        : $el.data('zoom') || 10,
+	        center: halifax,
+			zoom        : $el.data('zoom') || 10,
 	        mapTypeId   : google.maps.MapTypeId.ROADMAP
 	    };
 	    var map = new google.maps.Map( $el[0], mapArgs );
@@ -175,12 +176,12 @@
 		});
 	
 	    // Case: Single marker.
-	    if( map.markers.length == 1 ){
+	    if( map.markers.length == 1 ) {
 	        map.setCenter( bounds.getCenter() );
 			map.setZoom( 10 );
 	
 	    // Case: Multiple markers.
-	    } else{
+	    } else {
 	        map.setCenter( bounds.getCenter() );
 			map.setZoom( 10 );
 	    }
