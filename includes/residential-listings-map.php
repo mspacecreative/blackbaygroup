@@ -83,6 +83,34 @@
 <script>
 (function($) {
 
+	function initMap( $el ) {
+	
+	    // Find marker elements within map.
+	    var $markers = $el.find('.marker');
+	
+	    // Create gerenic map.
+	    var mapArgs = {
+	        zoom        : $el.data('zoom') || 16,
+	        mapTypeId   : google.maps.MapTypeId.ROADMAP
+	    };
+	    var map = new google.maps.Map( $el[0], mapArgs );
+	
+	    // Add markers.
+	    map.markers = [];
+	    $markers.each(function(){
+	        initMarker( $(this), map );
+	    });
+	
+	    // Center map based on markers.
+	    centerMap( map );
+		
+		// add marker cluster
+		markerCluster( map.markers, map );
+	
+	    // Return map instance.
+	    return map;
+	}
+	
 	var activeInfoWindow;
 	function initMarker( $marker, map ) {
 	
@@ -110,20 +138,14 @@
 	    if( $marker.html() ){
 	
 	        // Create info window.
-	        var infowindow = new google.maps.InfoWindow({
-	            content: $marker.html()
-	        });
-	
-	        // Show info window when marker is clicked.
-		    google.maps.event.addListener(marker, 'click', function() {
-		        map.panTo(this.getPosition());
-				//map.panBy(0,-100);
-				if (activeInfoWindow) { 
-					activeInfoWindow.close();
-				}
-		        infowindow.open(map, marker);
-		        activeInfoWindow = infowindow;
-			});
+        var infowindow = new google.maps.InfoWindow({
+            content: $marker.html()
+        });
+
+        // Show info window when marker is clicked.
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open( map, marker );
+        });
 	    }
 	}
 	
@@ -157,35 +179,6 @@
 	        this.setZoom(4);
 	        google.maps.event.removeListener(boundsListener);
 	    });
-	}
-	
-	function initMap( $el ) {
-	
-	    // Find marker elements within map.
-	    var $markers = $el.find('.marker');
-		//var halifax = { lat: 43.6386507, lng: -65.7209915 };
-	
-	    // Create gerenic map.
-	    var mapArgs = {
-	        zoom        : $el.data('zoom') || 16,
-	        mapTypeId   : google.maps.MapTypeId.ROADMAP
-	    };
-	    var map = new google.maps.Map( $el[0], mapArgs );
-	
-	    // Add markers.
-	    map.markers = [];
-	    $markers.each(function(){
-	        initMarker( $(this), map );
-	    });
-	
-	    // Center map based on markers.
-	    centerMap( map );
-		
-		// add marker cluster
-		markerCluster( map.markers, map );
-	
-	    // Return map instance.
-	    return map;
 	}
 	
 	// Render maps on page load.
