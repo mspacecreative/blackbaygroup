@@ -106,7 +106,7 @@
 	    centerMap( map );
 		
 		// add marker cluster
-		markerCluster( map.markers, map )
+		markerCluster( map.markers, map );
 	
 	    // Return map instance.
 	    return map;
@@ -147,8 +147,8 @@
 	
 	        // Show info window when marker is clicked.
 		    google.maps.event.addListener(marker, 'click', function() {
-		        //map.setCenter(this.getPosition());
-				map.panBy(0,-100);
+		        map.panTo(this.getPosition());
+				//map.panBy(0,-100);
 				if (activeInfoWindow) { 
 					activeInfoWindow.close();
 				}
