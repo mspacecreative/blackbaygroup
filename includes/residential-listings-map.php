@@ -91,8 +91,7 @@
 	
 	    // Create gerenic map.
 	    var mapArgs = {
-	        //center: halifax,
-			zoom        : $el.data('zoom') || 10,
+	        zoom        : $el.data('zoom') || 10,
 	        mapTypeId   : google.maps.MapTypeId.ROADMAP
 	    };
 	    var map = new google.maps.Map( $el[0], mapArgs );
@@ -129,9 +128,7 @@
 	        position : latLng,
 	        map: map,
 			icon: {
-				url: window.location.protocol + '//' + window.location.host + '/wp-content/themes/blackbay/includes/img/black-pin.png',
-				size: new google.maps.Size(32, 32),
-				origin: new google.maps.Point(0, 0),
+				url: window.location.protocol + '//' + window.location.host + '/wp-content/themes/blackbay/includes/img/black-pin.png'
 		    }
 	    });
 	
