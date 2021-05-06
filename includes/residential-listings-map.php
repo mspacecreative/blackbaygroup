@@ -80,8 +80,6 @@
 }
 </style>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaoJHIfiCoCLbOPVV_aK-uFXmta91ZBiU"></script>
-
 <script>
 (function($) {
 
