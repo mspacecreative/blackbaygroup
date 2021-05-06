@@ -168,12 +168,11 @@
 	
 	    // Create map boundaries from all map markers.
 	    var bounds = new google.maps.LatLngBounds();
-	    map.markers.forEach(function( marker ){
-	        bounds.extend({
-	            lat: marker.position.lat(),
-	            lng: marker.position.lng()
-	        });
-	    });
+	    
+		$.each( map.markers, function( i, marker ){
+			var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
+			bounds.extend( latlng );
+		});
 	
 	    // Case: Single marker.
 	    if( map.markers.length == 1 ){
