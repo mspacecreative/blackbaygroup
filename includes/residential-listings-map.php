@@ -186,7 +186,7 @@
 	var map = null;
 	
 	// Render maps on page load.
-	$function(){
+	$(document).ready(function() {
 	    $('.acf-map').each(function(){
 	        map = new_map( $(this) );
 	    });
