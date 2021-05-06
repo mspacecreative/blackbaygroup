@@ -72,7 +72,7 @@ function google_maps() {
 // GOOGLE MAP API
 function my_acf_init() {
 	
-	acf_update_setting('google_api_key', 'AIzaSyAMjm_0er-ybuWcVoPXYLSr82mn6bvNqCY');
+	acf_update_setting('google_api_key', 'AIzaSyDaoJHIfiCoCLbOPVV_aK-uFXmta91ZBiU');
 }
 
 // ACTIONS, OPTIONS AND FILTERS
