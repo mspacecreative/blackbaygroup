@@ -95,7 +95,7 @@
 	    // Create gerenic map.
 	    var mapArgs = {
 	        zoom        : $el.data('zoom') || 10,
-	        mapTypeId   : google.maps.MapTypeId.ROADMAP,
+	        mapTypeId   : google.maps.MapTypeId.ROADMAP
 	    };
 	    var map = new google.maps.Map( $el[0], mapArgs );
 	
@@ -115,18 +115,6 @@
 	    return map;
 	}
 	
-	/**
-	 * initMarker
-	 *
-	 * Creates a marker for the given jQuery element and map.
-	 *
-	 * @date    22/10/19
-	 * @since   5.8.6
-	 *
-	 * @param   jQuery $el The jQuery element.
-	 * @param   object The map instance.
-	 * @return  object The marker instance.
-	 */
 	var activeInfoWindow;
 	function initMarker( $marker, map ) {
 	
@@ -138,7 +126,7 @@
 	        lng: parseFloat( lng )
 	    };
 	
-	    // Create marker instance.
+	   // Create marker instance.
 	    var marker = new google.maps.Marker({
 	        position : latLng,
 	        map: map,
@@ -160,7 +148,7 @@
 	            content: $marker.html()
 	        });
 	
-		    // Show info window when marker is clicked.
+	        // Show info window when marker is clicked.
 		    google.maps.event.addListener(marker, 'click', function() {
 		        map.setCenter(marker.getPosition());
 				map.panBy(0,-100);
