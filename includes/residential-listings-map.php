@@ -1,8 +1,4 @@
 <style type="text/css">
-.info_content {
-	
-}
-
 .info_content a {
 	display: inline-block;
 	margin: 0;
