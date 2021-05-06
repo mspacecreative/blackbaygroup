@@ -87,12 +87,11 @@
 	
 	    // Find marker elements within map.
 	    var $markers = $el.find('.marker');
-		var halifax = { lat: 43.6386507, lng: -65.7209915 };
+		//var halifax = { lat: 43.6386507, lng: -65.7209915 };
 	
 	    // Create gerenic map.
 	    var mapArgs = {
-	        center: halifax,
-			zoom        : $el.data('zoom') || 10,
+	        zoom        : $el.data('zoom') || 10,
 	        mapTypeId   : google.maps.MapTypeId.ROADMAP
 	    };
 	    var map = new google.maps.Map( $el[0], mapArgs );
@@ -148,7 +147,7 @@
 	
 	        // Show info window when marker is clicked.
 		    google.maps.event.addListener(marker, 'click', function() {
-		        map.setCenter(marker.getPosition());
+		        map.setCenter(this.getPosition());
 				map.panBy(0,-100);
 				if (activeInfoWindow) { 
 					activeInfoWindow.close();
