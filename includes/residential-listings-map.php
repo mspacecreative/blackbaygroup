@@ -132,7 +132,7 @@
 
 	// Create marker instance.
 	var marker = new google.maps.Marker({
-	    position : latLng,
+	    position : latlng,
 	    map: map,
 		icon: {
 			url: window.location.protocol + '//' + window.location.host + '/wp-content/themes/blackbay/includes/img/black-pin.png'
