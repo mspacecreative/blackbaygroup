@@ -80,6 +80,8 @@
 }
 </style>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaoJHIfiCoCLbOPVV_aK-uFXmta91ZBiU"></script>
+
 <script>
 (function($) {
 
@@ -87,11 +89,11 @@
 	
 	    // Find marker elements within map.
 	    var $markers = $el.find('.marker');
-		var halifax = { lat: 43.6386507, lng: -65.7209915 };
+		//var halifax = { lat: 43.6386507, lng: -65.7209915 };
 	
 	    // Create gerenic map.
 	    var mapArgs = {
-	        center: halifax,
+	        //center: halifax,
 			zoom        : $el.data('zoom') || 10,
 	        mapTypeId   : google.maps.MapTypeId.ROADMAP
 	    };
