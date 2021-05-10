@@ -443,16 +443,6 @@ html .et_pb_section, html .et_pb_row {
 	display: none;
 }
 
-.left-content, .right-content {
-	float: left;
-	width: 50%;
-	position: relative;
-}
-
-/*.fw-container {
-	background: #fff;
-}*/
-
 p.light, .light h1 {
 	color: #fff;
 }

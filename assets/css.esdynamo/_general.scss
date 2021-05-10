@@ -10,3 +10,10 @@ body.wp-admin, body.login {
 html, body {
 	height: 100%;
 }
+
+// TWO COLUMN LAYOUT
+.left-content, .right-content {
+	float: left;
+	width: 50%;
+	position: relative;
+}
