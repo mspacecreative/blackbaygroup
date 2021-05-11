@@ -1949,7 +1949,7 @@ src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/s
 	color: #333;
 }
 
-img[src="https://staging.blackbaygroup.build/wp-content/themes/blackbay/includes/img/black-pin.png"], img[src="https://staging.blackbaygroup.ca/wp-content/themes/blackbay/includes/img/black-pin.png"] {
+img[src="https://staging.blackbaygroup.build/wp-content/themes/blackbay/includes/img/black-pin.png"], img[src="https://staging.blackbaygroup.ca/wp-content/themes/blackbay/includes/img/black-pin.png"], img[src="https://blackbaygroup.ca/wp-content/themes/blackbay/includes/img/black-pin.png"] {
 	width: 32px !important;
 	height: 32px !important;
 }
