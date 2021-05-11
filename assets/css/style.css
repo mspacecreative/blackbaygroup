@@ -2215,6 +2215,13 @@ img[src="https://staging.blackbaygroup.build/wp-content/themes/blackbay/includes
 	}
 }
 
+@media (max-width: 480px) {
+	.tagline h1 {
+		font-size: 50px;
+		line-height: 1;
+	}
+}
+
 @media (max-width: 812px) and (orientation: landscape) {
 	.headline {
 		font-size: 60px;
@@ -2223,6 +2230,11 @@ img[src="https://staging.blackbaygroup.build/wp-content/themes/blackbay/includes
 	
 	.triangle {
 		bottom: -350px;
+	}
+	
+	.tagline h1 {
+		font-size: 50px;
+		line-height: 1;
 	}
 }
 
