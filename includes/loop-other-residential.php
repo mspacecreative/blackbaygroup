@@ -2,7 +2,14 @@
 $args = array(
 	'post_type' => 'residential',
 	'posts_per_page' => -1,
-	'post__not_in' => array ($post->ID)
+	'post__not_in' => array ($post->ID),
+	'meta_query'=> array(
+		array(
+            'key' => 'exclude_from_list',
+            'value' => '1',
+            'compare' => '!='
+        )
+	)
 );
 			
 $loop = new WP_Query( $args );
