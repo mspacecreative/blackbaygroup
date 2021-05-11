@@ -1,14 +1,4 @@
-jQuery(document).ready(function($) {
-	
-	// MASONRY CALL
-	var $grid = $('.grid').imagesLoaded( function() {
-	$grid.masonry({
-		itemSelector: '.grid-item',
-		columnWidth: '.grid-sizer',
-		percentPosition: true,
-		gutter: '.gutter-sizer'
-		});
-	});
+(function($) {
 	
 	$(function(){
 	    window.pointerEventsPolyfill();
@@ -61,9 +51,6 @@ jQuery(document).ready(function($) {
 	    };
 	});
 	
-	// FIX SUB MENU ITEM
-	$('.mobile-nav li.menu-item-has-children').removeClass('menu-item-has-children');
-	
 	// FULL HEIGHT HER0
 	function heroBanner() {
 		$('.hero-bg').height($(window).height());
@@ -77,6 +64,16 @@ jQuery(document).ready(function($) {
 	$('p:empty').remove();
 	
 	$(document).ready(function () {
+		
+		// MASONRY CALL
+		var $grid = $('.grid').imagesLoaded( function() {
+		$grid.masonry({
+			itemSelector: '.grid-item',
+			columnWidth: '.grid-sizer',
+			percentPosition: true,
+			gutter: '.gutter-sizer'
+			});
+		});
 		
 		// VIEW MORE DETAILS BUTTON
 		/*$('.view-more').click(function() {
@@ -208,7 +205,7 @@ jQuery(document).ready(function($) {
 		bevelOverlay();
 	});
 
-});
+})(jQuery);
 
 // MASONRY
 /*!
