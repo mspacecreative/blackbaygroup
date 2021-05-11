@@ -10,7 +10,7 @@
                     zoom: 15,
 
                     // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(44.6511996, -63.5881475), // BlackBay Group
+                    center: new google.maps.LatLng(44.6511996, -63.588147), // BlackBay Group
 
                     // How you would like to style the map. 
                     // This is where you would paste any style found on Snazzy Maps.
@@ -211,32 +211,10 @@
 
                 // Let's also add a marker while we're at it
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(44.6511996, -63.5881475),
+                    position: new google.maps.LatLng(44.6511996, -63.588147),
                     map: map,
                     icon: pinSymbol("#000000"),
                 });
-				
-				var contentString = '<div id="content">'+
-				      '<div id="siteNotice">'+
-				      '</div>'+
-				      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-				      '<div id="bodyContent">'+
-				      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-				      'sandstone rock formation in the southern part of the '+
-				      'Northern Territory, central Australia.</p>'+
-				      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-				      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-				      '(last visited June 22, 2009).</p>'+
-				      '</div>'+
-				      '</div>';
-				
-				  var infowindow = new google.maps.InfoWindow({
-				    content: contentString
-				  });
-				
-				marker.addListener('click', function() {
-				    infowindow.open(map, marker);
-				  });
             }
         </script>
 <div id="map" style="width: 100%; height: 300px; margin-bottom: 50px;"></div>
