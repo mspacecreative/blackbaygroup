@@ -1757,6 +1757,14 @@ src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/s
 	color: black;
 }
 
+.grecaptcha-badge {
+	display: none !important;
+}
+
+.page-id-99 .grecaptcha-badge, .page-id-288 .grecaptcha-badge {
+	display: block !important;
+}
+
 .rental_app {
 	margin: auto;
 	max-width: 900px;
