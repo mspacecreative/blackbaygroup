@@ -4,3 +4,11 @@
 .page-id-99 .grecaptcha-badge, .page-id-288 .grecaptcha-badge {
 	display: block!important;
 }
+.wpcf7-submit {
+	padding: 10px 15px 8px;
+    line-height: inherit;
+    font-size: 15px;
+    text-transform: uppercase;
+	border: 2px solid #000;
+	cursor: pointer;
+}
