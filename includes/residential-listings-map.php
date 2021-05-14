@@ -178,7 +178,7 @@
 		} else {
 			// fit to bounds
 			map.setCenter( bounds.getCenter() );
-		   	map.setZoom( 2 ); // Change the zoom value as required
+		   	map.setZoom( 9 ); // Change the zoom value as required
 			//map.fitBounds( bounds ); // This is the default setting which I have uncommented to stop the World Map being repeated
 		}
 	}
