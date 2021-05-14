@@ -88,7 +88,7 @@
 		var $markers = $el.find('.marker');
 	
 		var args = {
-			zoom		: 16,
+			zoom		: 9,
 			center		: new google.maps.LatLng(0, 0),
 			mapTypeId	: google.maps.MapTypeId.ROADMAP
 		};
@@ -174,7 +174,7 @@
 		if( map.markers.length == 1 ) {
 			// set center of map
 		    map.setCenter( bounds.getCenter() );
-		    map.setZoom( 16 );
+		    map.setZoom( 9 );
 		} else {
 			// fit to bounds
 			map.setCenter( bounds.getCenter() );
@@ -212,7 +212,7 @@ $loop = new WP_Query( $args );
 
 if ( $loop->have_posts() ) : ?>
 <div class="acf-map-container">
-	<div class="acf-map" data-zoom="10">
+	<div class="acf-map" data-zoom="9">
 		<?php while ( $loop->have_posts() ) : $loop->the_post();
 		
 		// Load sub field values.
