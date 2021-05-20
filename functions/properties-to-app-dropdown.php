@@ -2,7 +2,7 @@
 
 function listings_to_app_dropdown ( $tag, $unused ) {
 
-    if ( $tag['name'] = 'app-properties' )
+    if ( $tag['name'] != 'app-properties' )
         return $tag;
 
     $args = array (
@@ -34,4 +34,4 @@ function listings_to_app_dropdown ( $tag, $unused ) {
 
 }
 
-add_filter( 'wpcf7_form_tag', 'listings_to_app_dropdown', 10, 2);
+add_filter( 'wpcf7_form_tag', 'listings_to_app_dropdown');
