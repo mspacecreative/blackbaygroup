@@ -2,7 +2,7 @@
 
 function listings_to_app_dropdown ( $tag, $unused ) {
 
-    if ( $tag['name'] != 'app-properties' )
+    if ( $tag['name'] = 'app-properties' )
         return $tag;
 
     $args = array (
