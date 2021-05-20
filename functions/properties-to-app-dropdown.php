@@ -34,4 +34,4 @@ function listings_to_app_dropdown ( $tag, $unused ) {
 
 }
 
-add_filter( 'wpcf7_form_tag', 'listings_to_app_dropdown');
+add_filter( 'wpcf7_form_tag', 'listings_to_app_dropdown', 10, 2);
